@@ -1,0 +1,26 @@
+{
+  "name": "Challenge 18",
+  "version": "1.0.0",
+  "description": "Social Network API",
+  "main": "server.js",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node utils/seed",
+    "heroku-postbuild": "node utils/seed.js"
+  },
+  "keywords": [],
+  "author": "Duc Dang",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dateformat": "^5.0.3",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
