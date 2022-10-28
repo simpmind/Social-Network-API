@@ -29,10 +29,7 @@ module.exports = {
                     { new: true }
                 );
             })
-            .then((dbUserData) => {
-                if (!dbUserData) {
-                    return res.status(404).json({ message: 'User was created but no user with this id' });
-                }
+            .then(() => {
                 res.json({ message: 'User was successfully created' });
             })
             .catch((err) => {
@@ -87,7 +84,7 @@ module.exports = {
     addFriend(req, res) {
         User.findOneAndUpdate(
             { _id: req.params.userId },
-            { $addToSet: { friends: req.body } },
+            { $addToSet: { friends: req.params.friendId } },
             { new: true }
         )
             .then((user) =>
@@ -101,7 +98,7 @@ module.exports = {
     removeFriend(req, res) {
         User.findOneAndUpdate(
             { _id: req.params.userId },
-            { $pull: { friends: req.params.userId } },
+            { $pull: { friends: req.params.friendId } },
             { new: true }
         )
             .then((user) =>

@@ -16,8 +16,6 @@ const thoughtSchema = new Schema(
             get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
         },
         username: {
-            // type: Schema.Types.ObjectId,
-            // ref: 'user',
             type: String,
             required: true,
         },
@@ -26,7 +24,6 @@ const thoughtSchema = new Schema(
     {
         toJSON: {
             getters: true,
-            // virtual: true
         },
         id: false
     }

@@ -4,6 +4,10 @@ const usernames = [
     'Sarah',
     'Nathaniel',
     'Parker',
+    'Zi',
+    'Gillian',
+    'Jones',
+    'Smith',
 ];
 
 const thoughtText = [
@@ -29,7 +33,6 @@ const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 // Get a random username
 const getRandomUserName = () =>
     `${getRandomArrItem(usernames)}${getRandomArrItem(usernames)}`;
-
 
 // Get a random thought
 const getRandomThought = () =>
